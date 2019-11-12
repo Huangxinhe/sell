@@ -4,17 +4,22 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 
 /**
  * @program sell
  * @description: 商品
  * @author: huangxinhe
  * @create: 2019/09/07 22:49
+ * @date 2019-10-05 22:19
+ * @author huangxinhe
  */
 @Entity
 @Data
 public class ProductInfo {
+
     @Id
     private String productId;
 
@@ -39,6 +44,9 @@ public class ProductInfo {
     /** 品类 */
     private Integer categoryType;
 
+    /** 创建时间 */
+    private Date createTime;
 
-
+    /** 更新时间 */
+    private Date updateTime;
 }
