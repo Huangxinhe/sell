@@ -7,6 +7,8 @@ spring:
   jpa:
     show-sql: true
     open-in-view: true
+  jackson:
+    default-property-inclusion: non_null
 server:
   servlet:
     context-path: /sell
@@ -17,3 +19,6 @@ server:
 #  file: /var/log/tomcat/sell/sell.log
 #  level:
 #    com.imooc.LoggerTest: debug
+wechat:
+  mpAppId: wx05b60fa24f6e67c9
+  mpAppSecret: 545a3641a7617a6d93b5a63638bee6ad
