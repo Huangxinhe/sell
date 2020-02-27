@@ -9,6 +9,9 @@ spring:
     open-in-view: true
   jackson:
     default-property-inclusion: non_null
+  redis:
+    host: 192.168.0.107
+    port: 6379
 server:
   servlet:
     context-path: /sell
@@ -22,3 +25,15 @@ server:
 wechat:
   mpAppId: wx05b60fa24f6e67c9
   mpAppSecret: 545a3641a7617a6d93b5a63638bee6ad
+  openAppId: wx6ad144e54af67d87
+  openAppSecret: 78778
+  mchId: 1483469312
+  mchKey: 06C56A89949D617XXXXXXXXX
+  keyPath: /var/weixin_cert/h5.p12
+  motifyUrl: http://sell.natapp4.cc/sell/pay/notify
+
+projectUrl:
+  wechatMpAuthorize: http://sell.natapp4.cc
+  wechatOpenAuthorize: http://sell.natapp4.cc
+  sell:
+
