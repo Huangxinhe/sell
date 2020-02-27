@@ -50,6 +50,9 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderMasterRepository orderMasterRepository;
 
+    @Autowired
+    private PushMessageService pushMessageService;
+
     @Override
     public OrderDTO create(OrderDTO orderDTO) {
         String orderId = KeyUtil.genUniqueKey();
@@ -166,6 +169,8 @@ public class OrderServiceImpl implements OrderService {
             log.error("【完结订单】更新失败，orderMaster={}",orderMaster);
             throw new SellException(ResultEnum.ORDER_UPDATE_FAIL);
         }
+        //推送微信模版消息
+        pushMessageService.orderStatus(orderDTO);
         return orderDTO;
     }
 
